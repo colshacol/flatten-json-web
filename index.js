@@ -1,6 +1,3 @@
-flatten.flatten = flatten
-flatten.unflatten = unflatten
-
 function flatten(target, opts) {
   opts = opts || {}
 
@@ -105,6 +102,12 @@ function unflatten(target, opts) {
 
   return result
 }
+
+flatten.flatten = flatten
+flatten.unflatten = unflatten
+
+// var isBuffer = require('is-buffer');
+
 const isBuffer = function (obj) {
   return obj != null && (_isBuffer(obj) || _isSlowBuffer(obj) || !!obj._isBuffer)
 }
